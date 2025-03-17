@@ -1,0 +1,104 @@
+/* Header */
+.page-header {
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 4rem;
+    margin-bottom: 60px;
+}
+/* Buttons Nav */
+.buttons {
+    margin: 0 auto 20px;
+    width: 70%;
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+}
+.morning, .afternoon {
+    font-size: 1.2rem;
+    padding: 10px 25px;
+    border-radius: 200px;
+}
+.morning {
+    border: 3px solid #eeaf26;
+}
+.morning:hover {
+    font-weight: bold;
+    background-color: #eeaf26;
+    cursor: pointer;
+}
+.afternoon {
+    border: 3px solid rgb(233, 104, 58);
+}
+.afternoon:hover {
+    font-weight: bold;
+    background-color: rgb(233, 104, 58);
+    cursor: pointer;
+}
+.morning_active {
+    background-color: #eeaf26;
+    font-weight: bold;
+}
+.afternoon_active {
+    background-color: rgb(233, 104, 58);
+    font-weight: bold;
+}
+/* Info */
+.info {
+    display: flex;
+    justify-content: center;
+    gap: 8%;
+    margin: 0 auto 20px;
+    background-color: #eeaf26;
+    border-radius: 20px;
+    width: 70%;
+    padding: 40px 15px;
+    transition: background-color 0.5s;
+    transition-timing-function: ease;
+}
+.info-left {
+    width: 50%;
+}
+.info-left h2 {
+    font-size: 3rem;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+.info-left p {
+    margin-bottom: 5%;
+    font-size: 1.1rem;
+}
+.info-left img {
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+}
+.info-right {
+    width: 35%;
+}
+.info-right h4 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.info-right p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+.info-right .lunch {
+    font-size: 1.5rem;
+}
+.info-right button {
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 200px;
+    margin-top: 20px;
+    border: none;
+    background-color: white;
+    border: 2px solid black;
+}

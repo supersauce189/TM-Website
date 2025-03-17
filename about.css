@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    margin: 50px auto;
+    width: 70%;
+    overflow: hidden;
+    height: 80vh;
+}
+
+.image {
+    flex: 1;
+    background: url('Images/about_court.jpg') no-repeat center center/cover;
+    border-radius: 20px;
+}
+
+.text-content {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-content h1 {
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.text-content h1 span {
+    color: rgb(233, 104, 58);
+}
+
+.text-content p {
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
