@@ -6,6 +6,10 @@ const coach = document.getElementById('coach');
 const time = document.getElementById('time');
 const lunch = document.getElementById('lunch');
 
+console.log("HI");
+console.log("Width: " + screen.width);
+console.log("Height: " + screen.height);
+
 morningButton.addEventListener('click', () => {
     morningButton.classList.add('morning_active');
     afternoonButton.classList.remove('afternoon_active');
