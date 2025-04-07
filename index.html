@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="index.css">
+    <script src="script.js" defer></script>
+    <script src="index.js" defer></script>
     <title>Document</title>
 </head>
 <body>
@@ -13,7 +16,7 @@
             <img src="Images/icon.png" height="75" alt="TM Basketball">
             <h1>TM Basketball</h1>
         </div>
-        <ul>
+        <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="teams.html">Teams</a></li>
             <li><a href="about.html">About Us</a></li>
@@ -22,7 +25,17 @@
             <li><a href="clinic.html">Clinics</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
+        <img src="menuIcon.svg" alt="Hamburger Icon" class="menu-icon">
     </nav>
+    <ul class="sidebar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="teams.html">Teams</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="tryout.html">Tryouts</a></li>
+        <li><a href="camps.html">Summer Camp</a></li>
+        <li><a href="clinic.html">Clinics</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
     <div class="hero">
         <div class="photo-card left">
             <img src="Images/hero_raptors.png" alt="Team celebrating a win">
@@ -40,6 +53,7 @@
             <img src="Images/hero_lb.png" alt="Player practicing shooting drills">
         </div>
     </div>
+    <h1>Gallery</h1>
     <div class="gallery">
         <div class="gallery-container">
             <div class="photo"><img src="Images/gallery_dragons.png" alt="Team Celebration"></div>
@@ -47,5 +61,75 @@
             <div class="photo"><img src="Images/gallery_amazons.jpg" alt="Championship Win"></div>
         </div>
     </div>
+    <!-- Slideshow Container -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="Images/gallery_vipers.png" alt="Image 1"></div>
+            <div class="swiper-slide"><img src="Images/gallery_dragons.png" alt="Image 2"></div>
+            <div class="swiper-slide"><img src="Images/gallery_amazons.jpg" alt="Image 3"></div>
+        </div>
+        
+        <!-- Arrows -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+    <h1>Team Highlights</h1>
+    <div class="video-container">
+        <video width="960" height="540" controls>
+            <source src="promoVid.mov">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="container">
+        <h1>Our Bay Area Programs</h1>
+        <div class="grid">
+             <a href="teams.html">
+                <div class="card">
+                    <img src="Images/hero_raptors.png" alt="Dock">
+                    <div class="card-content">
+                        <h2>AAU Teams</h2>
+                        <p>View our list of AAU teams for boys and girls, grades 2-11</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="camps.html">
+                <div class="card">
+                    <img src="Images/hero_raptors.png" alt="FAA Compliance">
+                    <div class="card-content">
+                        <h2>Camps</h2>
+                        <p>Join our spring, summer, fall, or winter camps!</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Card 3 -->
+             <a href="clinic.html">
+                <div class="card">
+                    <img src="Images/hero_raptors.png" alt="Drones">
+                    <div class="card-content">
+                        <h2>Clinics</h2>
+                        <p>Join our basketball clinic designed to enhance skills and develop confidence.</p>
+                    </div>
+                </div>
+            </a>
+            <!-- Card 4 -->
+             <a href="tryout.html">
+                <div class="card">
+                    <img src="Images/hero_raptors.png" alt="Paladin EXT">
+                    <div class="card-content">
+                        <h2>Tryouts</h2>
+                        <p>Get a chance to join our AAU teams!</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- Swiper.js Script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

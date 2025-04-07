@@ -1,15 +1,19 @@
+:root {
+    --accent: #FF5C00;
+    --secondary: #eeaf26;
+}
+
 .container {
     display: flex;
     flex-direction: row-reverse;
     margin: 15vh auto;
-    width: 70vw;
+    width: 80vw;
+    height: 90vh;
     overflow: hidden;
-    height: 80vh;
 }
 
 .image {
-    flex: 1;
-    background: url('Images/about_court.jpg') no-repeat center center/cover;
+    width: 50%;
     border-radius: 20px;
 }
 
@@ -19,6 +23,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 50%;
 }
 
 .text-content h1 {
@@ -33,5 +38,89 @@
 
 .text-content p {
     line-height: 1.6;
+    font-size: 1.1rem;
+}
+/* Coaches */
+.coaches-heading {
+    font-size: 3rem;
+    text-align: center;
+}
+.card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+}
+.card {
+    display: flex;
+    gap: 3vw;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+.card img {
+    border-radius: 20px;
+    width: 35vw;
+    height: 35vw;
+}
+.text {
+    padding: 0 20px;
+}
+.text h2 {
+    font-size: 2rem;
+    margin: 15px;
+    margin-left: 0;
+}
+.text h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin: 0;
+    margin-top: 4vh;
+}
+.text ul {
     font-size: 1.2rem;
+}
+.text p {
+    width: 35vw;
+}
+
+@media (max-width: 767px) {
+    .card-container {
+        gap: 75px;
+    }
+    .container {
+        flex-direction: column;
+        height: auto;
+        margin: 5vh auto;
+        width: 90vw;
+    }
+    .text-content {
+        padding: 0;
+    }
+    .text-content h1 {
+        font-size: 2.5rem;
+        margin-top: 50px;
+    }
+    .image, .text-content {
+        width: 100%;
+    }
+    .card {
+        flex-direction: column;
+    }
+    .card img, .text p, .text h2 {
+        width: 90vw;
+        height: auto;
+        margin: 0 auto;
+    }
+    .text {
+        padding: 0;
+        width: 100%;
+    }
+    .text h2 {
+        margin-bottom: 2vh;
+    }
+    .text h3 {
+        margin-top: 2vh;
+    }
+    ul {
+        margin-top: 0;
+    }
 }

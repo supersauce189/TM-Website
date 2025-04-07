@@ -3,155 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Summer Camp 2025</title>
+    <title>Card Component</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        .page-header {
-            background-color: #EC661B;
-            color: #fff;
-            text-align: center;
-            padding: 50px 0;
-        }
-
-        .page-header h1 {
-            font-size: 3.5rem;
-            margin: 0;
-        }
-
-        .intro-section {
-            text-align: center;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        .media-section {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            margin: 50px auto;
-            max-width: 1100px;
-            padding: 0 20px;
+            align-items: center;
+            height: 100vh;
+            background-color: #F5F5F5;
+            margin: 0;
+            font-family: Arial, sans-serif;
         }
 
-        .video-container,
-        .image-container {
-            flex: 1;
-            height: 300px;
-            border-radius: 12px;
+        .card {
+            width: 300px;
+            background-color: white;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
         }
 
-        .video-container iframe,
-        .image-container img {
+        .card img {
             width: 100%;
-            height: 100%;
+            height: 200px;
             object-fit: cover;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
         }
 
-        .details-section {
-            background-color: #fff;
-            text-align: center;
-            padding: 30px 20px;
-            margin: 40px auto;
-            max-width: 800px;
-            border-radius: 12px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        .card-content {
+            padding: 15px;
         }
 
-        .details-section h2 {
-            color: #EC661B;
-        }
-
-        .register-btn {
-            display: inline-block;
-            background-color: #EC661B;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 50px;
-            text-decoration: none;
+        .card-title {
+            font-size: 1.2rem;
+            margin: 0;
             font-weight: bold;
-            margin-top: 20px;
-            transition: background 0.3s ease;
         }
 
-        .register-btn:hover {
-            background-color: #e05518;
+        .card-description {
+            margin-top: 5px;
+            color: #666;
+            font-size: 0.9rem;
         }
 
-        .gallery-section {
-            text-align: center;
-            margin: 40px 0;
-        }
-
-        .gallery-section h2 {
-            color: #EC661B;
-        }
-
-        .gallery-container {
+        .card-icons {
             display: flex;
-            gap: 15px;
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
         }
 
-        .gallery-container img {
-            width: 100%;
-            height: 250px;
-            border-radius: 12px;
-            object-fit: cover;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        .card-icons .like {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            background-color: white;
+            padding: 5px 10px;
+            border-radius: 50px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-icons .like i {
+            color: red;
+        }
+
+        .card-icons .menu {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <header class="page-header">
-        <h1>Summer Adventure Camp 2025</h1>
-    </header>
-
-    <section class="intro-section">
-        <p>
-            Join us this summer for an unforgettable adventure! Our Summer Adventure Camp is designed for kids ages 7-14 to explore the outdoors, build friendships, and develop new skills. Activities include hiking, swimming, arts & crafts, and much more!
-        </p>
-    </section>
-
-    <section class="media-section">
-        <div class="video-container">
-            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/example-video" 
-                title="Summer Camp Highlights" frameborder="0" allowfullscreen>
-            </iframe>
+    <div class="card">
+        <img src="Images/raymond.jpg" alt="Team History">
+        <div class="card-content">
+            <h2 class="card-title">Team History</h2>
+            <p class="card-description">Recent achievements and performances.</p>
+            <div class="card-icons">
+                <div class="like">
+                    <i>❤️</i>
+                    <span>24</span>
+                </div>
+                <div class="menu">⋮</div>
+            </div>
         </div>
-        <div class="image-container">
-            <img src="camp-fire.jpg" alt="Camp Fire Fun">
-        </div>
-    </section>
-
-    <section class="details-section">
-        <h2>Camp Details</h2>
-        <p><strong>Dates:</strong> June 10 - August 15, 2025</p>
-        <p><strong>Location:</strong> Pinewood Adventure Park, 123 Forest Lane, Green Valley</p>
-        <p><strong>Activities:</strong> Hiking, Archery, Swimming, Arts & Crafts, and More!</p>
-        <p><strong>Price:</strong> $450 per week (includes meals and gear)</p>
-        <a href="#" class="register-btn">Register Now</a>
-    </section>
-
-    <section class="gallery-section">
-        <h2>Gallery</h2>
-        <div class="gallery-container">
-            <img src="camp-hiking.jpg" alt="Hiking Adventure">
-            <img src="camp-crafts.jpg" alt="Arts & Crafts">
-            <img src="camp-group.jpg" alt="Group Fun">
-        </div>
-    </section>
+    </div>
 </body>
 </html>
