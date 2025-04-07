@@ -98,6 +98,7 @@ nav a:hover::after {
 .close-icon, .menu-icon {
     width: 40px;
     height: 40px;
+    display: none;
 }
 .close-icon {
     content: url("close.svg");
@@ -114,13 +115,16 @@ nav a:hover::after {
 }
 @media (max-width: 767px) {
     nav {
-        width: 105%;
+        width: 102%;
         height: 75px;
         padding: 10px 20px;
         box-sizing: border-box;
     }
     nav .nav-links {
         display: none;
+    }
+    .menu-icon {
+        display: block;
     }
     .logo img {
         height: 50px;

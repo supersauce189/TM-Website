@@ -1,15 +1,16 @@
 .container {
     display: flex;
+    align-items: center;
     margin: 15vh auto;
     width: 70vw;
     overflow: hidden;
-    height: 80vh;
     gap: 0;
 }
 
 .image {
     flex: 1;
     border-radius: 20px;
+    height: 80vh;
 }
 
 .text-content {
