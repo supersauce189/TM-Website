@@ -11,6 +11,7 @@
     margin: 0 auto;
     width: 70vw;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 2vw;
 }

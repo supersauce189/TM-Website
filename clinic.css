@@ -1,0 +1,122 @@
+:root {
+    --accent: #FF5C00;
+    --secondary: #eeaf26;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3.75rem;
+    margin-bottom: 60px;
+}
+
+.hero-img {
+    width: 70vw;
+    margin: 40px auto 0;
+    height: 80vh;
+    border-radius: 20px;
+    display: block;
+    object-fit: cover;
+    object-position: bottom;
+    display: block;
+    border-radius: 20px;
+}
+
+.section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 20px;
+    background: #fff;
+}
+
+.card {
+    flex: 1 1 250px;
+    max-width: 280px;
+    background: var(--bg);
+    border-radius: 12px;
+    padding: 5px 20px;
+    text-align: center;
+    border: 2px solid #e0e0e0;
+    font-size: 1.05rem;
+}
+.card .curriculum {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: var(--subtext);
+}
+.card .coach {
+    display: flex;
+    gap: 30px;
+}
+.card .coach h3 {
+    font-weight: 400;
+}
+.card .coach .coach-link {
+    display: block;
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+.coach-link h3 {
+    display: inline;
+}
+.card img {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    margin-bottom: 12px;
+}
+
+.register-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 0;
+}
+.btn {
+    background-color: var(--accent, #ff5c00);
+    color: white;
+    padding: 14px 50px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+    h1 {
+        font-size: 2.75rem;
+    }
+    .hero-img {
+        width: 90vw;
+        height: 40vh;
+    }
+    .section {
+        flex-direction: column;
+    }
+    .card {
+        width: 90vw;
+        flex: 1 1;
+    }
+    .card h3 {
+        font-size: 1.3rem;
+    }
+    .card p, .card .coach h3 {
+        font-size: 1.1rem;
+    }
+}

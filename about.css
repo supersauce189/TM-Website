@@ -33,7 +33,7 @@
 }
 
 .text-content h1 span {
-    color: rgb(233, 104, 58);
+    color: var(--accent);
 }
 
 .text-content p {
@@ -52,6 +52,7 @@
 }
 .card {
     display: flex;
+    align-items: center;
     gap: 3vw;
     margin: 0 auto;
     border-radius: 20px;

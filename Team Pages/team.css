@@ -1,0 +1,105 @@
+html:root {
+    --swiper-navigation-size: 100px; /* or whatever size you want */
+}
+h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.vid-wrapper {
+    display: flex;
+    justify-content: center;
+}
+iframe {
+    width: 90vw;
+    height: calc(315 / 560 * 90vw);
+    display: flex;
+    justify-content: center;
+}
+  
+.gallery {
+    display: flex;
+    gap: 20px;
+    width: 95vw;
+    height: 600px;
+    margin: 50px auto 0;
+}
+  
+.left-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+}
+  
+.right-column {
+    flex: 2;
+    height: 100%;
+}
+  
+.left-column img, .right-column img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+  
+.left-column img {
+    height: calc((100% - 20px) / 2); /* Two images split height with 10px gap */
+}
+  
+.right-column img {
+    height: 100%;
+}
+  
+.swiper {
+    margin: 50px auto;
+    width: 90vw;
+    height: 90vh;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+    height: 100% !important;
+    flex-shrink: 0;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  background: none;
+  width: 100px;
+  height: 100px;
+  z-index: 10;
+}
+
+/* Use mask to create white arrow */
+.swiper-button-next::after, .swiper-button-prev::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+}
+
+/* Custom arrow shape using inline SVG as a mask */
+.swiper-button-next::after {
+  mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='9 18 15 12 9 6'/%3E%3C/svg%3E");
+}
+
+.swiper-button-prev::after {
+  mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='15 18 9 12 15 6'/%3E%3C/svg%3E");
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}

@@ -225,6 +225,7 @@ a:has(.card) {
 
 .card-content {
     padding: 20px;
+    padding-bottom: 0;
 }
 
 .card-content h2 {
@@ -237,6 +238,18 @@ a:has(.card) {
     margin-top: 10px;
     color: black;
     line-height: 1.6;
+}
+.card-arrow {
+    font-size: 1.7rem;
+    padding: 0 20px 10px;
+    color: var(--accent);
+    display: flex;
+    justify-content: flex-end;
+    transition: transform 0.2s ease;
+}
+
+  .card:hover .card-arrow {
+    transform: translateX(6px);
 }
 @media (max-width: 767px) {
     .text #statement {

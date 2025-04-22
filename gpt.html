@@ -1,96 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Card Component</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #F5F5F5;
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clickable Card</title>
+  <style>
+    :root {
+      --accent: #ff5c00;
+      --secondary: #eeaf26;
+    }
 
-        .card {
-            width: 300px;
-            background-color: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            position: relative;
-        }
+    body {
+      margin: 0;
+      font-family: 'Kanit', sans-serif;
+      background: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
 
-        .card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-        }
+    a.card-link {
+      text-decoration: none;
+      color: inherit;
+    }
 
-        .card-content {
-            padding: 15px;
-        }
+    .card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      width: 350px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
+    }
 
-        .card-title {
-            font-size: 1.2rem;
-            margin: 0;
-            font-weight: bold;
-        }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
 
-        .card-description {
-            margin-top: 5px;
-            color: #666;
-            font-size: 0.9rem;
-        }
+    .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
 
-        .card-icons {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 10px;
-        }
+    .card-content {
+      padding: 24px;
+    }
 
-        .card-icons .like {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            background-color: white;
-            padding: 5px 10px;
-            border-radius: 50px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
+    .card h2 {
+      margin: 0 0 10px;
+      font-size: 1.5rem;
+    }
 
-        .card-icons .like i {
-            color: red;
-        }
+    .card p {
+      margin: 0;
+      font-size: 1rem;
+      color: #333;
+    }
 
-        .card-icons .menu {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            cursor: pointer;
-        }
-    </style>
+    .card-arrow {
+      font-size: 1.4rem;
+      margin-top: 16px;
+      color: var(--accent);
+      display: flex;
+      justify-content: flex-end;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover .card-arrow {
+      transform: translateX(6px);
+    }
+  </style>
 </head>
 <body>
+
+  <a href="/aau-teams" class="card-link">
     <div class="card">
-        <img src="Images/raymond.jpg" alt="Team History">
-        <div class="card-content">
-            <h2 class="card-title">Team History</h2>
-            <p class="card-description">Recent achievements and performances.</p>
-            <div class="card-icons">
-                <div class="like">
-                    <i>❤️</i>
-                    <span>24</span>
-                </div>
-                <div class="menu">⋮</div>
-            </div>
-        </div>
+      <img src="https://via.placeholder.com/350x200.png?text=Team+Photo" alt="Team Photo" />
+      <div class="card-content">
+        <h2>AAU Teams</h2>
+        <p>View our list of AAU teams for boys and girls, grades 2–11.</p>
+        <div class="card-arrow">→</div>
+      </div>
     </div>
+  </a>
+
 </body>
 </html>
