@@ -9,14 +9,14 @@
 }
 .container {
     margin: 0 auto;
-    width: 70vw;
+    width: 80vw;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 2vw;
 }
 .card {
-    width: 20vw;
+    width: 25vw;
     background-color: white;
     border-radius: 20px;
     overflow: hidden;
@@ -24,15 +24,20 @@
     position: relative;
 }
 
+.img-wrapper {
+    height: 25vw;
+    width: 25vw;
+}
 .card img {
     width: 100%;
-    height: auto;
+    height: 25vw;
     object-fit: cover;
     border-radius: 20px;
 }
 
 .card-content {
     padding: 15px;
+    padding-left: 0;
 }
 
 .card-title {
@@ -80,6 +85,11 @@
     }
     .card {
         width: 100%;
+    }
+    .card img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1/1;
     }
     .card-title {
         font-size: 1.5rem;

@@ -9,6 +9,8 @@
 
 .image {
     width: 50%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 20px;
 }
 
@@ -46,6 +48,9 @@
 }
 
 @media (max-width: 767px) {
+    .image {
+        width: 100%;
+    }
     .container {
         flex-direction: column;
         height: auto;

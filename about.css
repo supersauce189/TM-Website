@@ -40,48 +40,6 @@
     line-height: 1.6;
     font-size: 1.1rem;
 }
-/* Coaches */
-.coaches-heading {
-    font-size: 3rem;
-    text-align: center;
-}
-.card-container {
-    display: flex;
-    flex-direction: column;
-    gap: 5vw;
-}
-.card {
-    display: flex;
-    align-items: center;
-    gap: 3vw;
-    margin: 0 auto;
-    border-radius: 20px;
-}
-.card img {
-    border-radius: 20px;
-    width: 35vw;
-    height: 35vw;
-}
-.text {
-    padding: 0 20px;
-}
-.text h2 {
-    font-size: 2rem;
-    margin: 15px;
-    margin-left: 0;
-}
-.text h3 {
-    font-size: 1.8rem;
-    font-weight: 400;
-    margin: 0;
-    margin-top: 4vh;
-}
-.text ul {
-    font-size: 1.2rem;
-}
-.text p {
-    width: 35vw;
-}
 
 @media (max-width: 767px) {
     .card-container {
@@ -110,18 +68,5 @@
         width: 90vw;
         height: auto;
         margin: 0 auto;
-    }
-    .text {
-        padding: 0;
-        width: 100%;
-    }
-    .text h2 {
-        margin-bottom: 2vh;
-    }
-    .text h3 {
-        margin-top: 2vh;
-    }
-    ul {
-        margin-top: 0;
     }
 }
