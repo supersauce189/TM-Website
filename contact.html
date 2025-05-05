@@ -90,7 +90,7 @@
     <div class="page-header">
         <h1>Contact Us</h1>
     </div>
-    <form id="form" method="POST">
+    <form id="form">
         <section class="form-section">
             <label for="name">Name *</label>
             <input type="text" name="name" id="name" required>
@@ -107,7 +107,7 @@
             <label for="message">Message *</label>
             <input type="text" name="message" id="message" required>
         </section>
-        <button type="submit" onclick="sendMail()">Send</button>
+        <button type="button" onclick="sendMail()">Send</button>
     </form>
     <script>
         function sendMail() {
