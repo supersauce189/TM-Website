@@ -54,7 +54,12 @@ button {
     border-radius: 200px;
     color: white;
 }
-
+.emailText {
+    margin: 0;
+    font-weight: 400;
+    font-size: 1.6rem;
+    text-align: center;
+}
 @media (max-width: 767px) {
     form {
         width: 90%;

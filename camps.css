@@ -1,7 +1,13 @@
 h1 {
     text-align: center;
     font-size: 3.75rem;
-    margin-bottom: 60px;
+    margin-bottom: 0;
+}
+.fullDay {
+    font-weight: 500;
+    font-size: 1.6rem;
+    text-align: center;
+    margin: 40px 0;
 }
 /* Buttons Nav */
 .buttons {
@@ -98,10 +104,14 @@ h1 {
     background-color: white;
     border: 2px solid black;
 }
-
 @media (max-width: 767px) {
     h1 {
         font-size: 2.75rem;
+    }
+    .fullDay {
+        font-size: 1.2rem;
+        margin: 30px auto;
+        width: 90%;
     }
     .info {
         width: calc(100% - 40px);
@@ -130,5 +140,5 @@ h1 {
     }
     .morning, .afternoon {
         font-size: 1.2rem;
-    } 
+    }
 }
