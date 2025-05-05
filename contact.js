@@ -1,17 +1,17 @@
-emailjs.init('o5qN_kXfzTxl5aEaz');
-
-document.getElementById("form").addEventListener("submit", function(e) {
-    e.preventDefault();
-  
-    const formData = new FormData(this);
-    emailjs.send('service_gvq0qkk', 'template_u3ppfqb', {
-        subject: this.subject.value,
-        name: this.name.value,
-        email: this.email.value,
-        message: this.message.value
-    }).then(() => {
-        alert('Email sent!');
-    }, (error) => {
-        alert('Failed to send email:', error);
-    });
-});
+function sendMail() {
+    var templateParams = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        message: document.getElementById('message').value,
+        subject: document.getElementById('subject').value,
+    };
+    
+    emailjs.send('service_a76y4b4', 'template_u3ppfqb', templateParams).then(
+        (response) => {
+          console.log('SUCCESS!', response.status, response.text);
+        },
+        (error) => {
+          console.log('FAILED...', error);
+        },
+    );
+}
