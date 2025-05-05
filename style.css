@@ -49,12 +49,12 @@ nav a {
     font-weight: 300;
     position: relative;
 }
-nav a.active::after {
+nav a.active::after:not {
     transform: scaleX(1);
     background-color: var(--secondary);
     height: 5px;
 }
-nav a::after {
+nav a::after:not(.teams) {
     content: "";
     position: absolute;
     left: 0;
@@ -81,7 +81,47 @@ nav a:hover::after {
     93% { transform: scaleX(1) translateY(-0.5px); }
     100% { transform: scaleX(1) translateY(0.5px); }
 }
-
+.teams {
+    position: relative;
+}
+.dropdown li {
+    list-style: none;
+    height: 100%;
+    padding: 0.5rem 1rem;
+    font-weight: 400;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.dropdown {
+    position: absolute;
+    padding: 2vh 0.75vw;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    display: none;
+}
+.dropdown a {
+    color: black !important;
+    font-size: 1.1rem !important;
+}
+.teams:hover .dropdown {
+    display: block;
+}
+.teams a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: white;
+    padding-bottom: 0.5rem;
+}
+.dropdown-icon {
+    font-size: 20px;
+    transform: rotate(0deg);
+    transition: 0.3s ease-in-out all;
+}
+.teams:hover .dropdown-icon {
+    transform: rotate(-180deg);
+}
 .sidebar {
     text-decoration: none;
     list-style-type: none;
