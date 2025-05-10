@@ -7,13 +7,27 @@
     overflow: hidden;
 }
 
-.image {
+.swiper {
     width: 50%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
     border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.swiper-button-next,
+.swiper-button-prev {
+    background-color: white;
+    padding: 10px;
+    border-radius: 25%;
+}
 .text-content {
     flex: 1;
     padding: 40px;
@@ -45,10 +59,11 @@
     border: none;
     background-color: #eeaf26;
     color: white;
+    width: 50%;
 }
 
 @media (max-width: 767px) {
-    .image {
+    .swiper {
         width: 100%;
     }
     .container {
@@ -64,5 +79,8 @@
     }
     .text-content h1 {
         font-size: 2.5rem;
+    }
+    .text-content button {
+        width: 100%;
     }
 }

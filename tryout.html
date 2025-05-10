@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="tryout.css">
     <link rel="icon" href="Images/icon.png" type="image/png">
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="tryoutSwiper.js"></script>
 </head>
 <body>
     <nav>
@@ -78,13 +81,25 @@
         <li><a href="contact.html">Contact</a></li>
     </ul>
     <div class="container">
-        <img src="Images/tryout1.jpg" alt="Basketball Court" class="image">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="Images/tryout1.jpg"></div>
+              <div class="swiper-slide"><img src="Images/tryout2.jpg"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+          
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
         <div class="text-content">
             <h1>2025 Summer Tryout</h1>
             <p>Our goal is for all campers to work hard and feel good about themselves in a safe, disciplined, highly structured and motivating environment of learning and fun. We place the child and his or her personal development ahead of the game. Positive encouragement and measured improvement in the fundamental skills are trademarks of our camp, as well as players learning to work together in a team setting while playing games and tournaments.</p>
-            <p>Tryouts will be held at Peterson Middle School, Blach Junior High, and Moreland Middle School. Please look at the flyers for more inforamtion. Remember to arrive 15 minutes early to check in and warm up! We look forward to seeing you there!</p>
-            <button onclick="location.href='contact.html'">Register Now</button>
+            <p>Tryouts will be held at Peterson Middle School, Blach Junior High, and Moreland Middle School. Please look at the flyers for more information. Remember to arrive 15 minutes early to check in and warm up! We look forward to seeing you there!</p>
+            <a href="https://docs.google.com/forms/d/1dO3WFRCXqaLBu3_KHpe6qcAONQThOjgUq4JtVdoztbs/edit" target="_blank" rel="noopener noreferrer">
+                <button>Register Now</button>
+            </a>
         </div>
     </div>
+    
 </body>
 </html>

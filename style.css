@@ -70,7 +70,7 @@ nav a:hover::after {
     transform: scaleX(1);
     animation: bounce 0.7s ease-out;
 }
-nav a[href="teams.html"]::after {
+nav a[href="teams.html"]::after, .dropdown a::after {
     display: none;
 }
 
@@ -108,6 +108,7 @@ nav a[href="teams.html"]::after {
 }
 .teams:hover .dropdown {
     display: block;
+    z-index: 1000;
 }
 .teams a {
     display: flex;
