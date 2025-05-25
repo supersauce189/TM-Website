@@ -5,7 +5,9 @@
     --accent: #FF5C00;
     --secondary: #eeaf26;
 }
-
+a:visited:not(nav a) {
+    color: blue;
+}
 html {
     scroll-behavior: smooth;
 }
