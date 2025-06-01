@@ -14,7 +14,7 @@
     <script type="text/javascript">
     (function(){
         emailjs.init({
-            publicKey: "o5qN_kXfzTxl5aEaz",
+            publicKey: "witNomBVwgjRz-MWN",
         });
     })();
     </script>
@@ -118,16 +118,23 @@
                 message: document.getElementById('message').value,
                 subject: document.getElementById('subject').value,
             };
-            alert("hi");
-            emailjs.send('service_a76y4b4', 'template_u3ppfqb', templateParams).then(
+            emailjs.send('service_2ryqsec', 'template_3qk2mh5', templateParams).then(
                 (response) => {
-                console.log('SUCCESS!', response.status, response.text);
+                    console.log('SUCCESS!', response.status, response.text);
                 },
                 (error) => {
-                console.log('FAILED...', error);
+                    console.log('FAILED...', error);
                 },
             );
-            alert("Finished");
+            emailjs.send('service_2ryqsec', 'template_t1g289o', templateParams).then(
+                (response) => {
+                    console.log('SUCCESS!', response.status, response.text);
+                    alert("Thanks for your message! We’ve received it and sent you a confirmation email. We’ll be in touch soon.")
+                },
+                (error) => {
+                    console.log('FAILED...', error);
+                },
+            );
         }
     </script>
 </body>
